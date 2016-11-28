@@ -1,0 +1,74 @@
+﻿@model contactsManager.Web.Models.CreateContactViewModel
+
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="panel panel-primary" title="Add a new contact">
+    <div class="panel panel-heading"><h4><b>Add a new contact</b></h4></div>
+
+
+    @using (Html.BeginForm("Create","Contact",FormMethod.Post, new { enctype="multipart/form-data"}))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+        <fieldset>
+            <legend>CreateContactViewModel</legend>
+
+            <div class="control-label col-md-2">
+                @Html.LabelFor(model => model.FirstName)
+            </div>
+            <div class="form-horizontal">
+                @Html.EditorFor(model => model.FirstName)
+                @Html.ValidationMessageFor(model => model.FirstName)
+            </div>
+            <br />
+            <div class="control-label col-md-2">
+                @Html.LabelFor(model => model.LastName)
+            </div>
+            <div class="form-horizontal">
+                @Html.EditorFor(model => model.LastName)
+                @Html.ValidationMessageFor(model => model.LastName)
+            </div>
+            <br />
+            <div class="control-label col-md-2">
+                @Html.LabelFor(model => model.PhoneNumber)
+            </div>
+            <div class="form-horizontal">
+                @Html.EditorFor(model => model.PhoneNumber)
+                @Html.ValidationMessageFor(model => model.PhoneNumber)
+            </div>
+            <br />
+            <div class="control-label col-md-2">
+                @Html.LabelFor(model => model.Email)
+            </div>
+            <div class="form-horizontal">
+                @Html.EditorFor(model => model.Email)
+                @Html.ValidationMessageFor(model => model.Email)
+            </div> 
+            <br/>
+            <div class="control-label col-md-2">
+                @Html.LabelFor(model => model.PhotoUrl)
+            </div>
+            <div class="form-horizontal">
+                <input type="file" name="file" id="file" />
+            </div>
+        
+            <div class="col-md-offset-0 col-md-10">
+                <input type="submit" value="Create" class="btn btn-success" />
+            </div>
+
+        </fieldset>
+    }
+</div>
+<div>
+    <a href="@Url.Action("Index","Home")"><b><span class="glyphicon glyphicon-menu-left"></span>Back to list</b></a>  
+</div>
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

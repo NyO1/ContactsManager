@@ -1,0 +1,37 @@
+﻿@using contactsManager.Web.Controllers
+@using DotNetOpenAuth.OpenId.Extensions.AttributeExchange
+@using Microsoft.Ajax.Utilities
+
+@model IEnumerable<contactsManager.Domain.Contact>
+
+@{
+    ViewBag.Title = "Contact Manager";
+}
+
+<h1>@ViewBag.Title</h1>
+
+<a href="@Url.Action("Create", "Contact")" >
+    <span class="glyphicon glyphicon-plus"></span> <span class="glyphicon glyphicon-user "></span>
+</a>
+
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Contact</th>
+            <th>Actions</th>
+        </tr>
+    </thead> 
+    
+    @foreach (var contact in Model)
+    {
+        <tr>
+            <td><img src="@Href(contact.PhotoUrl)" alt=""  class="img-circle" height="50" width="50" /></td>
+            <td><b>@contact.FullName</b></td>
+            <td><button class="btn btn-info">@Html.ActionLink("Detail", "Detail", new { contact.Id }, null)</button></td>
+        </tr>
+    }
+
+</table>
+

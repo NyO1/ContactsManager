@@ -1,0 +1,38 @@
+﻿@model contactsManager.Domain.Contact
+
+@{
+    ViewBag.Title = "Detail";
+}
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3><b>@Model.FullName</b></h3>
+    </div>
+
+    <table class="table table-striped table-bordered">
+
+        <tr>
+            <td class="col-md-2 bg-primary"><b>First Name</b></td>
+            <td class="text-primary"><b>@Model.FirstName</b></td>
+        </tr>
+
+
+        <tr>
+            <td class="col-md-2 bg-primary"><b>Last Name</b></td>
+            <td class="text-primary"><b>@Model.LastName</b></td>
+        </tr>
+
+        <tr>
+            <td class="col-md-2 bg-primary"><b>Phone Number</b></td>
+            <td class="text-primary"><b>@Model.PhoneNumber</b></td>
+        </tr>
+
+        <tr>
+            <td class="col-md-2 bg-primary"><b>Email</b></td>
+            <td class="text-primary"><b>@Model.Email</b></td>
+        </tr>
+
+
+    </table>
+
+</div>
+@Html.ActionLink("Back to the list", "Index")
