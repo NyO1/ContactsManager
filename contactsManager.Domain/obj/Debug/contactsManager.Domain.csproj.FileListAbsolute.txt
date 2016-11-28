@@ -1,0 +1,10 @@
+c:\users\andrea.schisani\documents\visual studio 2013\Projects\contactsManager\contactsManager.Domain\bin\Debug\contactsManager.Domain.dll
+c:\users\andrea.schisani\documents\visual studio 2013\Projects\contactsManager\contactsManager.Domain\bin\Debug\contactsManager.Domain.pdb
+c:\users\andrea.schisani\documents\visual studio 2013\Projects\contactsManager\contactsManager.Domain\obj\Debug\contactsManager.Domain.csprojResolveAssemblyReference.cache
+c:\users\andrea.schisani\documents\visual studio 2013\Projects\contactsManager\contactsManager.Domain\obj\Debug\contactsManager.Domain.dll
+c:\users\andrea.schisani\documents\visual studio 2013\Projects\contactsManager\contactsManager.Domain\obj\Debug\contactsManager.Domain.pdb
+c:\Users\andrea.schisani\Documents\Visual Studio 2013\Projects\contactsManager\contactsManager.Domain\bin\Debug\contactsManager.Domain.dll.config
+c:\Users\andrea.schisani\Documents\Visual Studio 2013\Projects\contactsManager\contactsManager.Domain\bin\Debug\EntityFramework.dll
+c:\Users\andrea.schisani\Documents\Visual Studio 2013\Projects\contactsManager\contactsManager.Domain\bin\Debug\EntityFramework.SqlServer.dll
+c:\Users\andrea.schisani\Documents\Visual Studio 2013\Projects\contactsManager\contactsManager.Domain\bin\Debug\EntityFramework.xml
+c:\Users\andrea.schisani\Documents\Visual Studio 2013\Projects\contactsManager\contactsManager.Domain\bin\Debug\EntityFramework.SqlServer.xml
