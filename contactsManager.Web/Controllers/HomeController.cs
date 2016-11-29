@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Web;
 using System.Web.Mvc;
 using contactsManager.Domain;
 using contactsManager.Web.Infrastructure;
+using contactsManager.Web.Models;
 
 namespace contactsManager.Web.Controllers
 {
@@ -18,11 +20,30 @@ namespace contactsManager.Web.Controllers
         }
 
 
-        public ActionResult Index()
+        public ActionResult Index(string searchTerm = null)
         {
-            var allContacts =  _db.Contacts;
 
-            return View(allContacts);
+            var model = _db.Contacts
+                .OrderBy(c => c.FirstName)
+                .Where(c => searchTerm == null || c.FirstName.StartsWith(searchTerm) || c.LastName.StartsWith(searchTerm))
+                .Take(10)
+                .Select(c => new ContactListViewModel
+                {
+                    Id = c.Id,
+                    FirstName = c.FirstName,
+                    LastName = c.LastName,
+                    Email = c.Email,
+                    PhoneNumber = c.PhoneNumber,
+                    PhotoUrl = c.PhotoUrl
+                   
+                });
+
+            if (Request.IsAjaxRequest())
+            {
+                return PartialView("_Contacts", model);
+            }
+
+            return View(model);
         }
 
         public ActionResult About()

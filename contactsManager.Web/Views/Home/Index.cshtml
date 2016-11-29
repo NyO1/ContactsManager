@@ -1,8 +1,4 @@
-﻿@using contactsManager.Web.Controllers
-@using DotNetOpenAuth.OpenId.Extensions.AttributeExchange
-@using Microsoft.Ajax.Utilities
-
-@model IEnumerable<contactsManager.Domain.Contact>
+﻿@model IQueryable<contactsManager.Web.Models.ContactListViewModel>
 
 @{
     ViewBag.Title = "Contact Manager";
@@ -15,23 +11,11 @@
 </a>
 
 
-<table class="table table-bordered table-striped">
-    <thead>
-        <tr>
-            <th></th>
-            <th>Contact</th>
-            <th>Actions</th>
-        </tr>
-    </thead> 
-    
-    @foreach (var contact in Model)
-    {
-        <tr>
-            <td><img src="@Href(contact.PhotoUrl)" alt=""  class="img-circle" height="50" width="50" /></td>
-            <td><b>@contact.FullName</b></td>
-            <td><button class="btn btn-info">@Html.ActionLink("Detail", "Detail", new { contact.Id }, null)</button></td>
-        </tr>
-    }
+<form method="get" action="@Url.Action("Index")"
+      data-otf-ajax="true" data-otf-target="#contactList">
+    <input type="search" name="searchTerm" />
+    <button type="submit" class="btn-danger">Search</button>
+</form>
 
-</table>
 
+@Html.Partial("_Contacts", Model)

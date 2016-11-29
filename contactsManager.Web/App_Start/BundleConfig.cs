@@ -1,5 +1,4 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
 namespace contactsManager.Web
 {
@@ -8,6 +7,7 @@ namespace contactsManager.Web
         // For more information on Bundling, visit http://go.microsoft.com/fwlink/?LinkId=254725
         public static void RegisterBundles(BundleCollection bundles)
         {
+
             bundles.IgnoreList.Clear();
 
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
@@ -17,8 +17,9 @@ namespace contactsManager.Web
                         "~/Scripts/bootstrap.min.js"));
 
             bundles.Add(new StyleBundle("~/Content/bootstrapcss").Include(
-                        "~/Content/bootstrap.min.css",
-                        "~/Content/bootstrap-responsive.min.css"));
+                       "~/Content/bootstrap.min.css",
+                       "~/Content/bootstrap-responsive.min.css"));
+
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
