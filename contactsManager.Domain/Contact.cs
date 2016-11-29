@@ -17,9 +17,5 @@ namespace contactsManager.Domain
         public virtual string PhotoUrl { get; set; }
 
 
-        public string FullName
-        {
-            get { return FirstName + " " + LastName; }
-        }
     }
 }
