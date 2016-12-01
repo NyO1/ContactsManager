@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Web;
+﻿using System.Linq;
 using System.Web.Mvc;
+using System.Web.UI.WebControls;
 using contactsManager.Domain;
-using contactsManager.Web.Infrastructure;
 using contactsManager.Web.Models;
 
 namespace contactsManager.Web.Controllers
@@ -38,27 +34,51 @@ namespace contactsManager.Web.Controllers
                    
                 });
 
+            var modelFavorite = _db.Contacts
+                .Where(c => c.Pref == true)
+                .Take(6)
+                .Select(c => new FavoriteContactListViewModel
+                {
+                    Id = c.Id,
+                    PhotoUrl = c.PhotoUrl
+                });
+
+            var modelPage = new FavoriteAndContactLisViewModel(model, modelFavorite);
+
+            //Partial per la ricerca
             if (Request.IsAjaxRequest())
             {
                 return PartialView("_Contacts", model);
             }
 
-            return View(model);
+            return View(modelPage);
         }
 
-        public ActionResult About()
+
+        //GET Home/Edit/1
+        public ActionResult Edit(int id)
         {
-            ViewBag.Message = "Your app description page.";
+           
+            var contact = _db.Contacts.Single(c => c.Id == id);
+            return View(contact);
+
+        }
+
+
+        //POST
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(ContactEditViewModel viewModel, int id)
+        {
+             if (ModelState.IsValid)
+             {
+                 var contact = _db.Contacts.Single(c => c.Id == id);
+                 _db.Edit(contact);
+             }
 
             return View();
         }
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
 
 
         public ActionResult Detail(int id)

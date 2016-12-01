@@ -28,9 +28,18 @@ namespace contactsManager.Web.Infrastructure
         }
 
 
+        public void Edit(Contact c)
+        {
+            Contact remover = Contacts.Find(c.Id);
+            Contacts.Remove(remover);
+            Contacts.Add(c);
+        }
+
         IQueryable<Contact> IContactDataSource.Contacts 
         {
             get { return Contacts; }
         }
+
+
     }
 }

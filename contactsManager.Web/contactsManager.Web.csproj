@@ -212,8 +212,11 @@
     <Compile Include="Infrastructure\ContactDb.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\ContactEditViewModel.cs" />
     <Compile Include="Models\ContactListViewModel.cs" />
     <Compile Include="Models\CreateContactViewModel.cs" />
+    <Compile Include="Models\FavoriteAndContactLisViewModel.cs" />
+    <Compile Include="Models\FavoriteContactListViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -290,7 +293,6 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -299,6 +301,8 @@
     <Content Include="Views\Contact\Create.cshtml" />
     <Content Include="Views\Home\Detail.cshtml" />
     <Content Include="Views\Home\_Contacts.cshtml" />
+    <Content Include="Views\Home\_FavoriteContacts.cshtml" />
+    <Content Include="Views\Home\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

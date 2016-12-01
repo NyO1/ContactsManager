@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using contactsManager.Domain;
@@ -23,7 +24,9 @@ namespace contactsManager.Web.Controllers
             return View(model);
         }
 
-        
+
+
+
         [HttpPost]
         [AcceptVerbs(HttpVerbs.Post)]
         public ActionResult Create(CreateContactViewModel viewModel, HttpPostedFileBase file)

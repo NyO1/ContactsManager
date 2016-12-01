@@ -1,0 +1,33 @@
+﻿@model IQueryable<contactsManager.Web.Models.FavoriteContactListViewModel>
+
+@{
+    const int maxPerRow = 3;
+    const int maxElements = 6;
+    int counter = 0;
+    int counter2 = 0;
+}
+    
+<div id ="contactsFavorite">
+    <!--FAVORITE CONTACTS-->
+    <div class="row">
+        @foreach (var contact in Model)
+        {
+            counter++;
+            if (counter > maxPerRow)
+            {
+                counter = 0;
+                @Html.Raw("</div>")
+                @Html.Raw("<div class=\"row\">")
+            }
+            counter2++;
+            if (!(counter2 > maxElements))
+            {
+                <div class="col-md-4">
+                    <a href="@Url.Action("Detail", "Home", new {contact.Id}, null)">
+                        <img class="img-pref" width="170" height="130" src="@Href(contact.PhotoUrl)">
+                    </a>
+                </div>
+            }
+        }
+    </div>
+</div>

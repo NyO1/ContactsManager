@@ -2,7 +2,7 @@
 
 namespace contactsManager.Web.Models
 {
-    public class CreateContactViewModel
+    public class ContactEditViewModel
     {
         [Required]
         public string FirstName { get; set; }
@@ -16,6 +16,8 @@ namespace contactsManager.Web.Models
         public string Email { get; set; }
 
         [DataType(DataType.ImageUrl)]
-        public string PhotoUrl { get; set; } 
+        public string PhotoUrl { get; set; }
+
+        public bool Pref { get; set; }
     }
 }
