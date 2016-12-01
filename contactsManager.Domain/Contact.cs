@@ -16,5 +16,6 @@ namespace contactsManager.Domain
         public virtual string Email { get; set; }
         public virtual string PhotoUrl { get; set; }
 
+        public virtual bool Pref { get; set; }
     }
 }
