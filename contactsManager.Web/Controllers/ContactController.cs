@@ -32,7 +32,7 @@ namespace contactsManager.Web.Controllers
         public ActionResult Create(CreateContactViewModel viewModel, HttpPostedFileBase file)
         {
            
-            if (ModelState.IsValid && file!=null)
+            if (ModelState.IsValid )
             {
                 var contact = new Contact()
                 {
@@ -43,19 +43,27 @@ namespace contactsManager.Web.Controllers
 
                 };
 
-      
-            string name = Path.GetFileName(file.FileName);
-            string myfile = contact.Id + "_" + name;
+                if (viewModel.PhotoUrl != null)
+                {
+                    string name = Path.GetFileName(file.FileName);
+                    string myfile = contact.Id + "_" + name;
 
-            var path = Path.Combine(("~/Images/"), myfile);
-            contact.PhotoUrl = path;
-            file.SaveAs(Server.MapPath(path));
- 
-           _db.Add(contact);
-           _db.Save();
-           return RedirectToAction("Index", "Home");                
+                    var path = Path.Combine(("~/Images/"), myfile);
+                    contact.PhotoUrl = path;
+                    file.SaveAs(Server.MapPath(path));
+                }
+                else
+                {
+                    contact.PhotoUrl = "~/Images/Generic_Avatar.png";
+                }
+
+
+                _db.Add(contact);
+                _db.Save();
+                return RedirectToAction("Index", "Home");                
 
             }
+
             return View(viewModel);
         }
 

@@ -1,4 +1,6 @@
 ﻿using System.Linq;
+using System.Runtime.InteropServices;
+using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.UI.WebControls;
 using contactsManager.Domain;
@@ -15,7 +17,7 @@ namespace contactsManager.Web.Controllers
             _db = db;
         }
 
-
+        //Search bar and 2 partial view (FavoriteContactListViewModel + ContactListViewModel = FavoriteAndContactListViewModel) 
         public ActionResult Index(string searchTerm = null)
         {
 
@@ -57,7 +59,7 @@ namespace contactsManager.Web.Controllers
 
         //GET Home/Edit/1
         public ActionResult Edit(int id)
-        {
+        {   
            
             var contact = _db.Contacts.Single(c => c.Id == id);
             return View(contact);
@@ -65,18 +67,27 @@ namespace contactsManager.Web.Controllers
         }
 
 
-        //POST
-        [HttpPost]
+        //POST  Home/Edit/1
+        [System.Web.Mvc.HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(ContactEditViewModel viewModel, int id)
+        public ActionResult Edit(Contact contact)
         {
              if (ModelState.IsValid)
              {
-                 var contact = _db.Contacts.Single(c => c.Id == id);
-                 _db.Edit(contact);
+                 var contactDb =_db.Contacts.FirstOrDefault(c => c.Id == contact.Id);
+                 if (contactDb != null)
+                 {
+                     contactDb.FirstName = contact.FirstName;
+                     contactDb.LastName = contact.LastName;
+                     contactDb.Email = contact.Email;
+                     contactDb.PhoneNumber = contact.PhoneNumber;
+                     contactDb.Pref = contact.Pref;
+                 } 
+                
+                 _db.Save();
              }
 
-            return View();
+            return RedirectToAction("Index", "Home");
         }
 
 
@@ -85,6 +96,23 @@ namespace contactsManager.Web.Controllers
         {
             var contact = _db.Contacts.Single(c => c.Id == id);
             return View(contact);
+        }
+
+        //GET Home/Remove/1
+        public ActionResult Remove(int id)
+        {
+            var contact = _db.Contacts.Single(c => c.Id == id);
+            return View(contact);
+        }
+
+        //POST Home/Remove/id
+        [System.Web.Mvc.HttpPost]
+        public ActionResult Remove(Contact contact)
+        {
+            var contactDb = _db.Contacts.Single(c => c.Id == contact.Id);
+            _db.Remove(contactDb);
+            _db.Save();
+            return RedirectToAction("Index", "Home");
         }
 
     }

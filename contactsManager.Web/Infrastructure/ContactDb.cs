@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Web;
 using contactsManager.Domain;
+
 
 
 namespace contactsManager.Web.Infrastructure
@@ -27,13 +26,11 @@ namespace contactsManager.Web.Infrastructure
             Contacts.Add(c);
         }
 
-
-        public void Edit(Contact c)
+        public void Remove(Contact c)
         {
-            Contact remover = Contacts.Find(c.Id);
-            Contacts.Remove(remover);
-            Contacts.Add(c);
+            Contacts.Remove(c);
         }
+
 
         IQueryable<Contact> IContactDataSource.Contacts 
         {

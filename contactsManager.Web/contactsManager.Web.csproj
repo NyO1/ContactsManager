@@ -237,6 +237,7 @@
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="Images\Generic_Avatar.png" />
     <Content Include="Images\logo.png" />
     <Content Include="Images\photo.jpg" />
     <Content Include="Images\steven.jpg" />
@@ -303,6 +304,7 @@
     <Content Include="Views\Home\_Contacts.cshtml" />
     <Content Include="Views\Home\_FavoriteContacts.cshtml" />
     <Content Include="Views\Home\Edit.cshtml" />
+    <Content Include="Views\Home\Remove.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

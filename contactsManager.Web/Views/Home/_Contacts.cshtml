@@ -20,7 +20,9 @@
                 <td><img src="@Href(contact.PhotoUrl)" alt="" class="img-circle" height="55" width="65" /><b> &nbsp &nbsp &nbsp &nbsp @contact.FirstName  @contact.LastName</b></td>
                 <td><b>@contact.PhoneNumber</b></td>
                 <td><b>@contact.Email</b></td>
-                <td><button class="btn btn-info">@Html.ActionLink("Detail", "Detail", new { contact.Id }, null)</button></td>
+                <td><button class="btn btn-info">@Html.ActionLink("Detail", "Detail", new { contact.Id }, null)</button> <button class="btn btn-danger">
+                                                                                                                             @Html.ActionLink("Delete","Remove", new { contact.Id}, null)
+                                                                                                                         </button></td>
             </tr>
         }
 

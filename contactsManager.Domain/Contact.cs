@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 
 namespace contactsManager.Domain
 {
     public class Contact
     {
+        
         public virtual int Id { get; set; }
         public virtual string FirstName { get; set; }
         public virtual string LastName { get; set; }
@@ -17,5 +13,9 @@ namespace contactsManager.Domain
         public virtual string PhotoUrl { get; set; }
 
         public virtual bool Pref { get; set; }
+
+
+      
+
     }
 }

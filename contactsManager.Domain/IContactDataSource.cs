@@ -13,6 +13,8 @@ namespace contactsManager.Domain
         void Save();
 
         void Add(Contact c);
+
+        void Remove(Contact c);
     }
 
 

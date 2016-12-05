@@ -55,6 +55,13 @@
             <div class="form-horizontal">
                 <input type="file" name="file" id="file" />
             </div>
+            <br/>
+            <div class="control-label col-md-2">
+                @Html.LabelFor(model => model.Pref)
+            </div>
+            <div class="form-horizontal">
+                @Html.EditorFor(model => model.Pref)
+            </div>
         
             <div class="col-md-offset-0 col-md-10">
                 <input type="submit" value="Create" class="btn btn-success" />

@@ -1,78 +1,84 @@
-﻿@model contactsManager.Domain.Contact
+﻿@using System.Web.UI.WebControls
+@model contactsManager.Domain.Contact
 
 @{
     ViewBag.Title = "Edit";
 }
 
-<h2>Edit</h2>
+<div class="panel panel-primary">
+    <div class="panel panel-heading"><h4><b>Edit: @Model.FirstName @Model.LastName </b></h4></div>
 
-@using (Html.BeginForm()) {
-    @Html.AntiForgeryToken()
-    @Html.ValidationSummary(true)
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
 
-    <fieldset>
-        <legend>Contact</legend>
 
-        @Html.HiddenFor(model => model.Id)
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.FirstName)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.FirstName)
-            @Html.ValidationMessageFor(model => model.FirstName)
-        </div>
+        <fieldset>
+            <legend>Contact</legend>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.LastName)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.LastName)
-            @Html.ValidationMessageFor(model => model.LastName)
-        </div>
+            @Html.HiddenFor(model => model.Id)
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.PhoneNumber)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.PhoneNumber)
-            @Html.ValidationMessageFor(model => model.PhoneNumber)
-        </div>
+            <div class="control-label col-md-2">
+                @Html.LabelFor(model => model.FirstName)
+            </div>
+            <div class="form-horizontal">
+                @Html.EditorFor(model => model.FirstName)
+                @Html.ValidationMessageFor(model => model.FirstName)
+            </div>
+            <br />
+            <div class="control-label col-md-2">
+                @Html.LabelFor(model => model.LastName)
+            </div>
+            <div class="form-horizontal">
+                @Html.EditorFor(model => model.LastName)
+                @Html.ValidationMessageFor(model => model.LastName)
+            </div>
+            <br />
+            <div class="control-label col-md-2">
+                @Html.LabelFor(model => model.PhoneNumber)
+            </div>
+            <div class="form-horizontal">
+                @Html.EditorFor(model => model.PhoneNumber)
+                @Html.ValidationMessageFor(model => model.PhoneNumber)
+            </div>
+            <br />
+            <div class="control-label col-md-2">
+                @Html.LabelFor(model => model.Email)
+            </div>
+            <div class="form-horizontal">
+                @Html.EditorFor(model => model.Email)
+                @Html.ValidationMessageFor(model => model.Email)
+            </div>
+            <br />
+            <div class="control-label col-md-2">
+                @Html.LabelFor(model => model.PhotoUrl)
+            </div>
+            <div class="form-horizontal">
+                @Html.EditorFor(model => model.PhotoUrl)
+                @Html.ValidationMessageFor(model => model.PhotoUrl)
+            </div>
+            <br />
+            <div class="control-label col-md-2">
+                @Html.LabelFor(model => model.Pref)
+            </div>
+            <div class="form-horizontal">
+                @Html.EditorFor(model => model.Pref) @Html.ValidationMessageFor(model => model.Pref)
+            </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Email)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Email)
-            @Html.ValidationMessageFor(model => model.Email)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.PhotoUrl)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.PhotoUrl)
-            @Html.ValidationMessageFor(model => model.PhotoUrl)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Pref)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Pref)
-            @Html.ValidationMessageFor(model => model.Pref)
-        </div>
-
-        <p>
-            <input type="submit" value="Save" />
-        </p>
-    </fieldset>
-}
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
+            <p>
+                <input type="submit" value="Save" class="btn btn-success" />
+            </p>
+        </fieldset>
+    }
 </div>
+    
 
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+        <div>
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+
+        @section Scripts {
+            @Scripts.Render("~/bundles/jqueryval")
+        }
