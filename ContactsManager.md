@@ -1,7 +1,9 @@
 # contactsManager
 
-This is a personal project done by me starting from a blanch solution.
+![alt tag](https://raw.githubusercontent.com/NyO1/contactsManager/app_screenshot.png)
 
+#Technologies:
+ASP.NET, MVC, C#, Razor, jQuery, JavaScript, AJAX, SQL and Bootstrap
 It's a Contacts Manager (you don't say?), all done using ASP.NET, C#, MVC, Razor, Java Script, AJAX, SQL and Bootstrap.
 The idea is to have a database online with all our contacts like a music library, so everyone can login and view,add and manage contacts.
 
