@@ -1,6 +1,6 @@
 # contactsManager
 
-![alt tag](https://raw.githubusercontent.com/NyO1/contactsManager/app_screenshot.png)
+![alt tag](https://github.com/NyO1/contactsManager/blob/master/app_screenshot.png)
 
 #Technologies:
 ASP.NET, MVC, C#, Razor, jQuery, JavaScript, AJAX, SQL and Bootstrap
