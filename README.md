@@ -2,8 +2,8 @@
 
 ![alt tag](https://github.com/NyO1/contactsManager/blob/master/app_screenshot.png)
 
-<ul>
 #Technologies:
+<ul>
 <li><b>ASP.NET, MVC, C#, Razor, jQuery, JavaScript, AJAX, SQL and Bootstrap</b></ul></li>
 
 The idea is to have a database online with all the contacts like a music library, so everyone can login into his own account and manage his contacts.
