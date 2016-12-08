@@ -4,7 +4,8 @@
 
 #Technologies:
 <ul>
-<li><b>ASP.NET, MVC, C#, Razor, jQuery, JavaScript, AJAX, SQL and Bootstrap</b></ul></li>
+<li><b>ASP.NET, MVC, C#, Razor, jQuery, JavaScript, AJAX, SQL and Bootstrap</b></li>
+</ul>
 
 The idea is to have a database online with all the contacts like a music library, so everyone can login into his own account and manage his contacts.
 
@@ -13,7 +14,7 @@ The idea is to have a database online with all the contacts like a music library
 <li><b>The Home Page</b></li></ul>
 The home page displays on the top two rows of 3 profile images (contact photo) each.
 These contacts are decided by the user to have them really handy. In short words they represent your <b>favorite contacts</b>, and just clicking on one of these will be diplayed the contact details.
-After this, we have a <b>search bar</b> and the button that permit to <b>add a new contact</b>.
+After this, we have a <b>search bar</b> and the button that permit to <b>add a new contact</b>. 
 
 ![alt tag](https://github.com/NyO1/contactsManager/blob/master/Images/searcadd.png)
 
