@@ -41,7 +41,8 @@ The other in the contacts table is the <b>Delete</b> button (the red one), on cl
 <li>Paging the list of contacts using Autopaging.Mvc already imported</li>
 </ul>
 
-
+<br>
+<hr>
 Developer: <em>Andrea Schisani</em>
 
 
