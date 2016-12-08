@@ -10,7 +10,7 @@ The idea is to have a database online with all the contacts like a music library
 
 #Usage:
 <ul>
-<li><b>The Home Page</b></li>
+<li><b>The Home Page</b></li></ul>
 The home page displays on the top two rows of 3 profile images (contact photo) each.
 These contacts are decided by the user to have them really handy. In short words they represent your <b>favorite contacts</b>, and just clicking on one of these will be diplayed the contact details.
 After this, we have a <b>search bar</b> and the button that permit to <b>add a new contact</b>.
@@ -32,7 +32,7 @@ The first action button is the <b>Details</b> button (the light blue one) used t
 The other in the contacts table is the <b>Delete</b> button (the red one), on clicking on it the system will diplay a pop-up window to let the user confirm that he wants to delete this contact.
 
 ![alt tag](https://github.com/NyO1/contactsManager/blob/master/Images/deletepop.png)
-</ul>
+
 
 
 #TODO
