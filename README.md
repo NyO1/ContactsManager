@@ -42,7 +42,7 @@ The other in the contacts table is the <b>Delete</b> button (the red one), on cl
 </ul>
 
 
-<hr>
+<br>
 Developer: <em>Andrea Schisani</em>
 
 
