@@ -33,6 +33,6 @@ The other in the contacts table is the <b>Delete</b> button (the red one), on cl
 
 ![alt tag](https://github.com/NyO1/contactsManager/blob/master/Images/deletepop.png)
 
-<md>Andrea Schisani</md>
+<em>Andrea Schisani</em>
 
 
