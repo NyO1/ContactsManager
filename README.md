@@ -20,7 +20,7 @@ After this, we have a search bar and the button that permit to add a new contact
 The search bar permit the user to search into the database any contact by the first name or the last name.
 The add button will move the user to a new page with a form where he can fill it with the contacts info that he wants.
 
-//todo
+![alt tag](https://github.com/NyO1/contactsManager/blob/master/Images/addForm.png)
 
 Andrea Schisani
 
