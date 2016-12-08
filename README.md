@@ -11,7 +11,8 @@ The idea is to have a database online with all the contacts like a music library
 
 #Usage:
 <ul>
-<li><b>The Home Page</b></li></ul>
+<li><b>The Home Page</b></li>
+</ul>
 The home page displays on the top two rows of 3 profile images (contact photo) each.
 These contacts are decided by the user to have them really handy. In short words they represent your <b>favorite contacts</b>, and just clicking on one of these will be diplayed the contact details.
 After this, we have a <b>search bar</b> and the button that permit to <b>add a new contact</b>. 
