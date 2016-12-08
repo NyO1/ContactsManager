@@ -32,7 +32,7 @@ The first action button is the <b>Details</b> button (the light blue one) used t
 The other in the contacts table is the <b>Delete</b> button (the red one), on clicking on it the system will diplay a pop-up window to let the user confirm that he wants to delete this contact.
 
 ![alt tag](https://github.com/NyO1/contactsManager/blob/master/Images/deletepop.png)
-
+</ul>
 
 
 #TODO
