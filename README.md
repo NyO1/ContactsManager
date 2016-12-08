@@ -39,7 +39,7 @@ The other in the contacts table is the <b>Delete</b> button (the red one), on cl
 <ul>
 <li>The autocomple function is not working on the search bar using jQuery</li>
 <li>Paging the list of contacts using Autopaging.Mvc already imported</li>
-
+</ul>
 
 
 Developer: <em>Andrea Schisani</em>
